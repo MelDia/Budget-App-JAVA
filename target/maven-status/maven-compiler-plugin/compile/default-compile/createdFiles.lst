@@ -1,0 +1,9 @@
+web\IngresoControl.class
+domain\Egreso.class
+datos\EgresoDAO.class
+datos\Conexion.class
+datos\IngresoDAO.class
+domain\Ingreso.class
+test\AgregarIngreso.class
+test\TestConexion.class
+web\EgresoControl.class
