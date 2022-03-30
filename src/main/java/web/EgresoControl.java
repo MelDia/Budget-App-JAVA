@@ -84,16 +84,16 @@ public class EgresoControl extends HttpServlet {
         HttpSession sesion = request.getSession();
         sesion.setAttribute("egresos", egresos);
         sesion.setAttribute("EXPENSES", egresos.size());
-        sesion.setAttribute("totalBalance", this.calcularTotalIng(egresos));
+        sesion.setAttribute("totalBalanceEg", this.calcularTotalEg(egresos));
         response.sendRedirect("index.jsp");
     }
 
-    private double calcularTotalIng(List<Egreso> egresos) {
-        double totalBalance = 0;
+    private double calcularTotalEg(List<Egreso> egresos) {
+        double totalBalanceEg = 0;
         for (Egreso egreso : egresos) {
-            totalBalance += egreso.getValor();
+            totalBalanceEg += egreso.getValor();
         }
-        return totalBalance;
+        return totalBalanceEg;
     }
 
     private void agregarEg(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {

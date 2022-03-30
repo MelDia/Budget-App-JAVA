@@ -62,8 +62,8 @@
                 text-align: center;
             }
 
-            .agregar_descripcion,
-            .agregar_valor {
+            .agregar_descripcionIg,
+            .agregar_valorIg {
                 border: 1px solid #e7e7e7;
                 background-color: #fff;
                 color: inherit;
@@ -75,10 +75,10 @@
                 transition: border 0.3s;
             }
 
-            .agregar_descripcion {
+            .agregar_descripcionIg {
                 width: 400px;
             }
-            .agregar_valor {
+            .agregar_valorIg {
                 width: 100px;
             }
 
@@ -98,8 +98,8 @@
                 transform: translateY(2px);
             }
 
-            .agregar_descripcion:focus,
-            .agregar_valor:focus {
+            .agregar_descripcionIg:focus,
+            .agregar_valorIg:focus {
                 outline: none;
                 border: 1px solid #85acf9;
             }
@@ -119,8 +119,8 @@
                 <form action="${pageContext.request.contextPath}/IngresoControl?action=agregarIng" method="POST">
                     <div class="agregar">
                         <div class="agregar_contenedor">
-                            <input type="text" name="descripcion" class="agregar_descripcion" placeholder="Add description" />
-                            <input type="number" name="valor" class="agregar_valor" placeholder="Value" />
+                            <input type="text" name="descripcion" class="agregar_descripcionIg" placeholder="Add description" />
+                            <input type="number" name="valor" class="agregar_valorIg" placeholder="Value" />
                             <button type="submit" class="agregar_btn"> <ion-icon name="add-circle-outline" style="color: #85acf9;"></ion-icon> </button>
                         </div>
                     </div>

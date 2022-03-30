@@ -1,5 +1,6 @@
 web\IngresoControl.class
 domain\Egreso.class
+web\PresupuestoControl.class
 datos\EgresoDAO.class
 datos\Conexion.class
 datos\IngresoDAO.class

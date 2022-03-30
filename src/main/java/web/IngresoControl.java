@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/IngresoControl")
 public class IngresoControl extends HttpServlet {
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action != null) {
@@ -46,6 +47,7 @@ public class IngresoControl extends HttpServlet {
 
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action != null) {
@@ -82,16 +84,16 @@ public class IngresoControl extends HttpServlet {
         HttpSession sesion = request.getSession();
         sesion.setAttribute("ingresos", ingresos);
         sesion.setAttribute("INCOME", ingresos.size());
-        sesion.setAttribute("totalBalance", this.calcularTotalIng(ingresos));
+        sesion.setAttribute("totalBalanceIng", this.calcularTotalIng(ingresos));
         response.sendRedirect("index.jsp");
     }
 
     private double calcularTotalIng(List<Ingreso> ingresos) {
-        double totalBalance = 0;
+        double totalBalanceIng = 0;
         for (Ingreso ingreso : ingresos) {
-            totalBalance += ingreso.getValor();
+            totalBalanceIng += ingreso.getValor();
         }
-        return totalBalance;
+        return totalBalanceIng;
     }
 
     private void deleteIng(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
